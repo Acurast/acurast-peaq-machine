@@ -1,0 +1,42 @@
+{
+  "projects": {
+    "peaq-machine": {
+      "projectName": "peaq-machine",
+      "fileUrl": "dist/bundle.js",
+      "runtime": "NodeJSWithBundle",
+      "network": "mainnet",
+      "onlyAttestedDevices": true,
+      "enableDevtools": true,
+      "assignmentStrategy": {
+        "type": "Single"
+      },
+      "execution": {
+        "type": "interval",
+        "intervalInMs": 3600000,
+        "numberOfExecutions": 24,
+        "maxExecutionTimeInMs": 300000
+      },
+      "maxAllowedStartDelayInMs": 10000,
+      "usageLimit": {
+        "maxMemory": 0,
+        "maxNetworkRequests": 0,
+        "maxStorage": 0
+      },
+      "numberOfReplicas": 1,
+      "requiredModules": [],
+      "minProcessorReputation": 0,
+      "maxCostPerExecution": 20000000000,
+      "includeEnvironmentVariables": [
+        "MACHINE_PRIVATE_KEY",
+        "PEAQ_NETWORK",
+        "MACHINE_TIER",
+        "MAX_BOND_PEAQ"
+      ],
+      "processorWhitelist": [],
+      "minProcessorVersions": {
+        "android": 99
+      },
+      "restartPolicy": "no"
+    }
+  }
+}

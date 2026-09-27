@@ -1,0 +1,35 @@
+{
+  "name": "acurast-peaq-machine",
+  "version": "0.1.0",
+  "private": true,
+  "description": "PoC: a peaq machine (peaqOS Economics 2.0) running on an Acurast Processor",
+  "license": "MIT",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Acurast/acurast-peaq-machine.git"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "node build.mjs",
+    "typecheck": "tsc",
+    "machine:local": "tsx --env-file=.env src/index.ts",
+    "owner": "tsx --env-file=.env scripts/owner.ts",
+    "deploy": "npm run build && acurast deploy"
+  },
+  "dependencies": {
+    "@noble/curves": "^2.4.0",
+    "@noble/hashes": "^2.4.0",
+    "@peaqos/peaq-os-sdk": "^0.8.0",
+    "@scure/base": "^1.2.6",
+    "viem": "^2.56.9"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.4",
+    "esbuild": "^0.28.2",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}

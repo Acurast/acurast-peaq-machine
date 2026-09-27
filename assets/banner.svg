@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-labelledby="title desc">
+  <title id="title">peaq × Acurast</title>
+  <desc id="desc">An Acurast Processor, a smartphone, onboards itself as a peaq machine: peaqID, Machine NFT, tier bond and hourly signed activity events that build its Machine Credit Rating.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B0E17"/>
+      <stop offset="1" stop-color="#121728"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FF7A45"/>
+      <stop offset="1" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <linearGradient id="peaq" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8B5CF6"/>
+      <stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+    <radialGradient id="glowL" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#FF7A45" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#FF7A45" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowR" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#8B5CF6" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#8B5CF6" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#FFFFFF" stroke-opacity="0.035"/>
+    </pattern>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="9" markerHeight="9" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#A78BFA"/>
+    </marker>
+    <clipPath id="frame"><rect width="1280" height="640" rx="28"/></clipPath>
+  </defs>
+
+  <rect width="1280" height="640" rx="28" fill="url(#bg)"/>
+  <rect width="1280" height="640" rx="28" fill="url(#grid)"/>
+  <g clip-path="url(#frame)">
+    <circle cx="220" cy="400" r="260" fill="url(#glowL)"/>
+    <circle cx="960" cy="395" r="330" fill="url(#glowR)"/>
+  </g>
+
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+    <!-- Heading -->
+    <text x="80" y="112" font-size="56" font-weight="700" fill="#FFFFFF">peaq <tspan fill="url(#accent)">×</tspan> Acurast</text>
+    <text x="80" y="156" font-size="24" fill="#A7B0C3">Any Acurast phone becomes an autonomous machine in the peaq economy</text>
+
+    <!-- Live pill -->
+    <rect x="990" y="78" width="210" height="40" rx="20" fill="#16A34A" fill-opacity="0.14" stroke="#22C55E" stroke-opacity="0.5"/>
+    <circle cx="1016" cy="98" r="6" fill="#22C55E"/>
+    <text x="1032" y="104" font-size="17" font-weight="600" fill="#86EFAC">live on mainnet</text>
+
+    <!-- Phone: Acurast Processor -->
+    <rect x="110" y="208" width="224" height="380" rx="34" fill="#1A1F2E" stroke="url(#accent)" stroke-width="2.5"/>
+    <rect x="122" y="220" width="200" height="356" rx="24" fill="#0C1019"/>
+    <rect x="192" y="230" width="60" height="8" rx="4" fill="#232A3B"/>
+    <text x="142" y="276" font-size="12" font-weight="700" letter-spacing="1" fill="#FF9A6C">ACURAST PROCESSOR</text>
+    <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">
+      <text x="142" y="316" fill="#6B7489">$ run hourly</text>
+      <text x="142" y="350" fill="#E5E7EB">› identity</text>
+      <text x="302" y="350" fill="#A7B0C3" text-anchor="end">5ET73…Kxn</text>
+      <text x="142" y="380" fill="#E5E7EB">› onboard</text>
+      <text x="302" y="380" fill="#4ADE80" text-anchor="end">done</text>
+      <text x="142" y="410" fill="#E5E7EB">› qualify</text>
+      <text x="302" y="410" fill="#4ADE80" text-anchor="end">signed</text>
+      <text x="142" y="440" fill="#E5E7EB">› rating</text>
+      <text x="302" y="440" fill="#C4B5FD" text-anchor="end">MCR</text>
+    </g>
+    <rect x="142" y="476" width="160" height="72" rx="12" fill="#151A27" stroke="#2A3142"/>
+    <text x="222" y="505" font-size="13" font-weight="600" fill="#A7B0C3" text-anchor="middle">Processor Key</text>
+    <text x="222" y="530" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" fill="#FFB38F" text-anchor="middle">secp256k1</text>
+
+    <!-- Flow -->
+    <g stroke="#A78BFA" stroke-width="2.5" fill="none" stroke-linecap="round" marker-end="url(#arrow)">
+      <path d="M362 300H690" stroke-dasharray="2 9"/>
+      <path d="M362 398H690" stroke-dasharray="2 9"/>
+      <path d="M362 496H690" stroke-dasharray="2 9"/>
+    </g>
+    <g font-size="18" font-weight="600" fill="#E5E7EB" text-anchor="middle">
+      <text x="526" y="286">peaqID + Machine NFT</text>
+      <text x="526" y="384">tier bond in PEAQ</text>
+      <text x="526" y="482">signed events, every hour</text>
+    </g>
+    <g font-size="14" fill="#8A93A8" text-anchor="middle">
+      <text x="526" y="326">self-managed onboarding</text>
+      <text x="526" y="424">Economics 2.0</text>
+      <text x="526" y="522">Qualify</text>
+    </g>
+
+    <!-- peaq machine card -->
+    <rect x="720" y="208" width="480" height="380" rx="24" fill="#141A28" stroke="url(#peaq)" stroke-width="2.5"/>
+    <text x="752" y="250" font-size="13" font-weight="700" letter-spacing="1.5" fill="#A78BFA">PEAQ MACHINE</text>
+    <text x="752" y="292" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="30" font-weight="600" fill="#FFFFFF">144782…7060</text>
+    <text x="752" y="318" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" fill="#6B7489">did:peaq:1447826845…302837060</text>
+
+    <g font-size="17">
+      <path d="M752 342H1168M752 390H1168M752 438H1168M752 486H1168" stroke="#FFFFFF" stroke-opacity="0.07"/>
+      <text x="752" y="372" fill="#A7B0C3">Machine NFT</text>
+      <text x="1168" y="372" fill="#4ADE80" text-anchor="end" font-weight="600">minted ✓</text>
+      <text x="752" y="420" fill="#A7B0C3">Tier bond</text>
+      <text x="1168" y="420" fill="#FFFFFF" text-anchor="end" font-weight="600">Entry · 0.46 PEAQ</text>
+      <text x="752" y="468" fill="#A7B0C3">Activity</text>
+      <text x="1168" y="468" fill="#FFFFFF" text-anchor="end" font-weight="600">hourly, processor-signed</text>
+      <text x="752" y="516" fill="#A7B0C3">Credit rating</text>
+      <text x="1168" y="516" fill="#C4B5FD" text-anchor="end" font-weight="600">MCR building</text>
+    </g>
+    <rect x="752" y="538" width="416" height="30" rx="15" fill="url(#peaq)" fill-opacity="0.16"/>
+    <text x="960" y="558" font-size="14" fill="#C4B5FD" text-anchor="middle">machines.peaq.xyz</text>
+  </g>
+</svg>
