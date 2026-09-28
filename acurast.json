@@ -14,7 +14,7 @@
         "type": "interval",
         "intervalInMs": 3600000,
         "numberOfExecutions": 336,
-        "maxExecutionTimeInMs": 300000
+        "maxExecutionTimeInMs": 90000
       },
       "maxAllowedStartDelayInMs": 10000,
       "usageLimit": {
