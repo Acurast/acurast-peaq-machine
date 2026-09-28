@@ -92,7 +92,7 @@ switch (command) {
       manufacturer: target,
       tier: Number(env.MACHINE_TIER ?? 0) as SubscriptionTier,
     });
-    const want = preview.netPeaqAmount + parseEther(env.TOPUP_GAS_PEAQ || "1");
+    const want = preview.netPeaqAmount + parseEther(env.TOPUP_GAS_PEAQ || "15");
     const have = await rpc.getBalance({ address: target });
     console.log(`Tier ${preview.tier} bond ${formatEther(preview.netPeaqAmount)} PEAQ; machine holds ${formatEther(have)} PEAQ`);
     if (have >= want) break;

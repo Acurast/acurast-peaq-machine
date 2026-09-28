@@ -145,12 +145,15 @@ async function main() {
   if (dryRun) {
     log("DRY_RUN=1, skipping event submission", { dataHash, signature });
   } else {
+    // The registry rejects timestamps ahead of the chain, and a phone's clock can run ahead,
+    // so the event is dated from the latest block instead of the device clock.
+    const { timestamp: blockTime } = await machine.publicClient.getBlock();
     const event = await machine.submitEvent({
       machineId,
       eventType: EVENT_TYPE_ACTIVITY,
       value: 0,
       currency: "",
-      timestamp: Math.floor(Date.now() / 1000) - 10, // must not be ahead of block time
+      timestamp: Number(blockTime) - 10,
       rawData,
       // The trust level the PoC asks for, not an attestation: events from a processor are
       // signed by the runtime's job key, local runs by a mock key.

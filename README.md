@@ -79,7 +79,7 @@ Every step is idempotent, so each run picks up exactly where the machine stands.
 | [src/std.ts](src/std.ts) | processor | typed `_STD_` runtime, plus a local mock for laptop runs |
 | [src/networks.ts](src/networks.ts) | both | peaq mainnet and agung presets |
 | [scripts/owner.ts](scripts/owner.ts) | your computer | machine wallet, Gas Station funding, bond top-up, status |
-| [acurast.json](acurast.json) | Acurast CLI | deployment: hourly for 24 hours on one processor |
+| [acurast.json](acurast.json) | Acurast CLI | deployment: hourly for 2 weeks on one processor |
 
 ## Launch your own machine
 
@@ -108,7 +108,7 @@ cp .env.example .env          # fill in OWNER_PRIVATE_KEY and ACURAST_MNEMONIC
    npm run owner 2fa-confirm <code>
    npm run owner fund <code>
    ```
-3. **Fund the bond.** This sends the tier bond plus 1 PEAQ for gas (`TOPUP_GAS_PEAQ`).
+3. **Fund the bond.** This sends the tier bond plus 15 PEAQ for 2 weeks of gas (`TOPUP_GAS_PEAQ`).
    ```bash
    npm run owner topup
    ```
@@ -147,8 +147,8 @@ To keep a machine on a specific processor, set `processorWhitelist` in
 | | |
 |---|---|
 | Bond, mainnet tier 0 / 1 / 2 | ~0.46 / ~4.6 / ~910 PEAQ, priced by an on-chain oracle. `MAX_BOND_PEAQ` caps it (default 1). |
-| peaq gas | Onboarding plus the first event: about 0.2 PEAQ. |
-| Acurast | Up to 0.02 ACU per run, so at most 0.48 ACU for a day of hourly runs. Check with `acurast estimate-fee peaq-machine`. |
+| peaq gas | Onboarding: about 0.15 PEAQ. Each event: about 0.045 PEAQ, so about 15 PEAQ for 2 weeks of hourly events. |
+| Acurast | Up to 0.01 ACU per run, so at most 3.36 ACU for 2 weeks of hourly runs. The full amount is locked at deploy time, and any unused ACU is returned. Check with `acurast estimate-fee peaq-machine`. |
 
 ## What's next
 
